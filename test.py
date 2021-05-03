@@ -23,7 +23,7 @@ def login_chrome(_username, _password):
     browser.implicitly_wait(5)
     browser.get("https://www.instagram.com")
 
-    time.sleep(random.randint(1, 7))
+    time.sleep(random.randint(20, 30))
 
     _username_ = browser.find_element(By.NAME, "username")
     _username_.clear()
