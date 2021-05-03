@@ -2,3 +2,4 @@
 #aiogram==2.13
 selenium==3.141.0
 pyvirtualdisplay==2.1
+xvfbwrapper==0.2.9
