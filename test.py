@@ -23,7 +23,7 @@ def login_chrome(_username, _password):
     browser.implicitly_wait(5)
     browser.get("https://www.instagram.com")
     print("!!!!!!!!!!!!!!!!!!!!")
-    print(browser.page_source())
+    print(browser.page_source)
     print("!!!!!!!!!!!!!!!!!!!!")
 
     time.sleep(random.randint(20, 30))
