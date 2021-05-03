@@ -1,14 +1,13 @@
-from pyvirtualdisplay import Display
 from selenium import webdriver
+import os
 
-display = Display(visible=False, size=(800, 600))
-display.start()
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
 
-# now Firefox will run in a virtual display.
-# you will not see the browser.
-browser = webdriver.Chrome(executable_path="./chromedriver.exe")
-browser.get('http://www.google.com')
-print(browser.title)
-browser.quit()
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
-display.stop()
+driver.get("https://www.google.com")
+print(driver.page_source)
