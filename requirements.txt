@@ -1,2 +1,4 @@
-instabot==0.117.0
-aiogram==2.13
+#instabot==0.117.0
+#aiogram==2.13
+selenium==3.141.0
+pyvirtualdisplay==2.1

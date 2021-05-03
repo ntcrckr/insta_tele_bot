@@ -2,3 +2,5 @@
 /config/
 __pycache__
 geckodriver.log
+/.idea/
+/venv/

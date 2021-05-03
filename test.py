@@ -1,7 +1,14 @@
-from instagrapi import Client
+from pyvirtualdisplay import Display
+from selenium import webdriver
 
-cl = Client()
-cl.login("alexei.pozdnyakov", "#Lexa1367452")
+display = Display(visible=False, size=(800, 600))
+display.start()
 
-user_id = cl.user_id_from_username("nt_crckr")
-medias = cl.user_medias(user_id, 20)
+# now Firefox will run in a virtual display.
+# you will not see the browser.
+browser = webdriver.Chrome(executable_path="./chromedriver.exe")
+browser.get('http://www.google.com')
+print(browser.title)
+browser.quit()
+
+display.stop()
